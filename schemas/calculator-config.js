@@ -25,6 +25,17 @@ export default {
       description: 'The label for the button to close the "I\'m not sure" dialog.',
     },
     {
+      name: 'feedbackButtonText',
+      type: 'string',
+      title: 'Feedback Button Text',
+      description: 'The label for the button that links to the calculator feedback form.',
+    },
+    {
+      name: 'feebackButtonLink',
+      type: 'url',
+      title: 'Feedback Button Link',
+    },
+    {
       name: 'legalDisclaimer',
       type: 'text',
       title: 'Legal Disclaimer',
