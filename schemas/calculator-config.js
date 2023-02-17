@@ -31,7 +31,7 @@ export default {
       description: 'The label for the button that links to the calculator feedback form.',
     },
     {
-      name: 'feebackButtonLink',
+      name: 'feedbackButtonLink',
       type: 'url',
       title: 'Feedback Button Link',
     },
