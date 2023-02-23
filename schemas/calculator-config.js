@@ -25,26 +25,28 @@ export default {
       description: 'The label for the button to close the "I\'m not sure" dialog.',
     },
     {
-      name: 'feedbackButtonText',
+      name: 'feedbackButtonEligibleText',
       type: 'string',
-      title: 'Feedback Button Text',
-      description: 'The label for the button that links to the calculator feedback form.',
+      title: 'Feedback Button Eligible Text',
+      description:
+        "The label for the button that links to the calculator feedback form from pages where the user's conviction is eligible to vacate.",
     },
     {
-      name: 'feedbackButtonLink',
+      name: 'feedbackButtonEligibleLink',
       type: 'url',
-      title: 'Feedback Button Link',
+      title: 'Feedback Button Eligible Link',
     },
     {
-      name: 'checkAnotherConvictionButtonText',
+      name: 'feedbackButtonIneligibleText',
       type: 'string',
-      title: 'Check Another Conviction Button Text',
-      description: 'The label for the button that links back to the beginning of the calculator.',
+      title: 'Feedback Button Ineligible Text',
+      description:
+        "The label for the button that links to the calculator feedback form from pages where the user's conviction is ineligible to vacate.",
     },
     {
-      name: 'checkAnotherConvictionButtonLink',
+      name: 'feedbackButtonIneligibleLink',
       type: 'url',
-      title: 'Check Another Conviction Button Link',
+      title: 'Feedback Button Ineligible Link',
     },
     {
       name: 'legalDisclaimer',
