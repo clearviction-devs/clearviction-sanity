@@ -38,6 +38,14 @@ export const calculatorInfoPage = {
       description: "Is the user's conviction eligible for vacation?",
     },
     {
+      type: 'boolean',
+      name: 'isUndetermined',
+      title: 'Is Undetermined',
+      hidden: ({parent}) => !parent?.isFinalPage,
+      initialValue: false,
+      description: "Is the user's conviction eligibility unable to be determined at this time?",
+    },
+    {
       type: 'array',
       name: 'content',
       title: 'Content',
