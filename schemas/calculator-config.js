@@ -45,7 +45,7 @@ export default {
       name: 'feedback',
       type: 'object',
       title: 'Feedback',
-      description: 'The link to the calculator feedback form from final pages.',
+      description: 'Links to the calculator feedback forms from final pages.',
       fields: [
         {
           name: 'linkText',
@@ -53,13 +53,17 @@ export default {
           title: 'Link Text',
         },
         {
-          name: 'url',
+          name: 'ineligibleUrl',
           type: 'url',
-          title: 'URL',
+          title: 'Ineligible URL',
+        },
+        {
+          name: 'eligibleUrl',
+          type: 'url',
+          title: 'Eligible URL',
         },
       ],
     },
-
     {
       name: 'checkAnotherConviction',
       type: 'object',
