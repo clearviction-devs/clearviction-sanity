@@ -53,14 +53,14 @@ export default {
           title: 'Link Text',
         },
         {
-          name: 'ineligibleUrl',
+          name: 'isUndeterminedUrl',
           type: 'url',
-          title: 'Ineligible URL',
+          title: 'Eligibility Undetermined URL',
         },
         {
-          name: 'eligibleUrl',
+          name: 'allOtherFeedbackUrl',
           type: 'url',
-          title: 'Eligible URL',
+          title: 'All other feedback URL',
         },
       ],
     },
