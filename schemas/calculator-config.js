@@ -4,36 +4,84 @@ export default {
   title: 'Calculator Config',
   fields: [
     {
-      name: 'notSureHeader',
+      name: 'title',
       type: 'string',
-      title: '"Not Sure" Header',
-      description:
-        'The header to be displayed when the user clicks "I\'m not sure" on a question page.',
+      title: 'Title',
+      hidden: true,
+      readOnly: true,
     },
     {
-      name: 'notSureContent',
-      type: 'array',
-      title: '"Not Sure" Content',
-      of: [{name: 'content', type: 'block', title: 'content'}],
-      description:
-        'The content to be displayed when the user clicks "I\'m not sure" on a question page.',
+      name: 'unknownAnswer',
+      type: 'object',
+      title: 'Unknown Answer',
+      description: 'The button and content for unknown answers on a question page',
+      fields: [
+        {
+          name: 'promptText',
+          type: 'string',
+          title: 'Prompt Text',
+          description: 'Text for the button that will open the content modal.',
+        },
+        {
+          name: 'header',
+          type: 'string',
+          title: 'Header',
+        },
+        {
+          name: 'content',
+          type: 'array',
+          title: 'Content',
+          of: [{type: 'block'}],
+        },
+        {
+          name: 'closeText',
+          type: 'string',
+          title: 'Close Text',
+          description: 'Text for the button that will close the content modal.',
+        },
+      ],
     },
     {
-      name: 'notSureButtonText',
-      type: 'string',
-      title: '"Not Sure" Button Text',
-      description: 'The label for the button to close the "I\'m not sure" dialog.',
+      name: 'feedback',
+      type: 'object',
+      title: 'Feedback',
+      description: 'Links to the calculator feedback forms from final pages.',
+      fields: [
+        {
+          name: 'linkText',
+          type: 'string',
+          title: 'Link Text',
+        },
+        {
+          name: 'isUndeterminedUrl',
+          type: 'url',
+          title: 'Eligibility Undetermined URL',
+        },
+        {
+          name: 'allOtherFeedbackUrl',
+          type: 'url',
+          title: 'All other feedback URL',
+        },
+      ],
     },
     {
-      name: 'feedbackButtonText',
-      type: 'string',
-      title: 'Feedback Button Text',
-      description: 'The label for the button that links to the calculator feedback form.',
-    },
-    {
-      name: 'feedbackButtonLink',
-      type: 'url',
-      title: 'Feedback Button Link',
+      name: 'checkAnotherConviction',
+      type: 'object',
+      title: 'Check Another Conviction',
+      description: 'The link back to the beginning of the calculator.',
+      fields: [
+        {
+          name: 'linkText',
+          type: 'string',
+          title: 'Link Text',
+        },
+        {
+          name: 'reference',
+          type: 'reference',
+          title: 'Reference',
+          to: [{type: 'calculatorInfoPage'}],
+        },
+      ],
     },
     {
       name: 'legalDisclaimer',
