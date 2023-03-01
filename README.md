@@ -26,7 +26,7 @@
 
 ex: **"offense-fish-1-cont"** -> in the offense section, the first page of the fishing violation questions, and the page is not an end page, so we continue.
 
-1. **section-name** - the section of the calculator that the page belongs to. The section name should correpsond to the name of the section of the calculator the page is in. Options are:
+1. **section-name** - the section of the calculator that the page belongs to. The section name should correspond to the name of the section of the calculator the page is in. Options are:
 
 - head: the initial section of the calculator
 - offense: general questions about the offense
