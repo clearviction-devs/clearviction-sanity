@@ -22,7 +22,7 @@
 
 ## Page naming convention
 
-**< section-name > - < descriptor > - < order-number > - < status >**
+**< section-name > - < branch-name > - < page-number > - < outcome >**
 
 ex: **"offense-fish-1-cont"** -> in the offense section, the first page of the fishing violation questions, and the page is not an end page, so we continue.
 
@@ -33,16 +33,16 @@ ex: **"offense-fish-1-cont"** -> in the offense section, the first page of the f
 - circ: surrounding circumstances
 - terms: terms of the offense
 
-2. **descriptor** - a one word descriptor of the page, or part of the section to further refine the page. Examples are:
+2. **branch-name** - a one word branch-name of the page, or part of the section to further refine the page. Examples are:
 
 - fish: the pages about fishing violations
 - pro: the pages about prostitution
 - dv: the pages about domestic violence
 - main: if it is a general section, or you don't need to specify any further
 
-3. **order-number** - the order of the page in the section. This is used to determine the order of the pages in the navigation. The first page in a section should be 1, and the next page should be 2, and so on. Pages with a **status** that are NOT _continue_, will branch off and retain the parent **order-number** of the page it came from.
+3. **page-number** - the order of the page in the section. This is used to determine the order of the pages in the navigation. The first page in a section should be 1, and the next page should be 2, and so on. Pages with a **outcome** that are NOT _continue_, will branch off and retain the parent **page-number** of the page it came from.
 
-4. **status** - denotes the status of the page. Options are:
+4. **outcome** - denotes the outcome of the page. Options are:
 
 - cont: the page is not an end page, and the user should be able to continue to the next page, via any number of choices.
 - eligible: the page is an end page, and the user's conviction is eligible for vacating.
