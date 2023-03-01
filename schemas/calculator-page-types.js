@@ -53,6 +53,12 @@ export const calculatorInfoPage = {
       description: 'The main content that will be displayed to the user.',
     },
     {
+      type: 'image',
+      name: 'image',
+      title: 'Image',
+      description: 'An image to display on the page.',
+    },
+    {
       type: 'array',
       name: 'choices',
       title: 'Choices',
