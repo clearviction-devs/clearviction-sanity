@@ -34,6 +34,11 @@ export default {
           of: [{type: 'block'}],
         },
         {
+          name: 'image',
+          type: 'image',
+          title: 'Image',
+        },
+        {
           name: 'closeText',
           type: 'string',
           title: 'Close Text',
