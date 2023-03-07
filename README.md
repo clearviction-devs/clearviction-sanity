@@ -6,9 +6,10 @@
 2. Commit and push the changes, open a PR, and merge to main.
 3. In clearviction-next repository, the `/utils` folder contains corresponding files that also must be updated to match the new schema changes.
 4. Commit and push the changes, open a PR, and merge to main.
-5. Visit the [Sanity Studio](https://clearviction.sanity.studio/desk), update any fields that were added, and publish the changes.
-6. In the Sanity Studio, click the Deploy tab, and deploy changes.
-7. Visit the [Clearviction website](https://clearviction.org/), and verify that the new pages are working as expected.
+5. Using the Sanity-CLI, making sure you are logged in, run `sanity deploy` to deploy the changes to the Sanity Studio.
+6. Visit the [Sanity Studio](https://clearviction.sanity.studio/desk), update any fields that were added, and publish the changes.
+7. In the Sanity Studio, click the Deploy tab, and deploy changes.
+8. Visit the [Clearviction website](https://clearviction.org/), and verify that the new pages are working as expected.
 
 ## Adding new pages
 
