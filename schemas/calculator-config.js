@@ -70,6 +70,24 @@ export default {
       ],
     },
     {
+      name: 'errorReportingForm',
+      type: 'object',
+      title: 'Error Reporting Form',
+      description: 'The link to the error reporting form.',
+      fields: [
+        {
+          name: 'linkText',
+          type: 'string',
+          title: 'Link Text',
+        },
+        {
+          name: 'errorReportingFormUrl',
+          type: 'url',
+          title: 'Error Reporting Form URL',
+        },
+      ],
+    },
+    {
       name: 'checkAnotherConviction',
       type: 'object',
       title: 'Check Another Conviction',
