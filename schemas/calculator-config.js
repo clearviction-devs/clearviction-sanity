@@ -11,10 +11,11 @@ export default {
       readOnly: true,
     },
     {
-      name: 'unknownAnswer',
+      name: 'notSureAnswer',
       type: 'object',
-      title: 'Unknown Answer',
-      description: 'The button and content for unknown answers on a question page',
+      title: 'Not Sure Answer',
+      description:
+        'The button and content that users click when they are not sure about their answer on a question page',
       fields: [
         {
           name: 'promptText',
