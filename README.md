@@ -7,7 +7,7 @@ This repository holds code for the Sanity CMS that powers the Clearviction websi
 To get this repository on your machine, you can follow the commands below:
 
 ```bash
-git clone https://github.com/openseattle/clearviction-sanity.git
+git clone https://github.com/clearviction-devs/clearviction-sanity.git
 ```
 
 ### Installation
