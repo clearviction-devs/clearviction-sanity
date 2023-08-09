@@ -24,7 +24,7 @@ git clone https://github.com/clearviction-devs/clearviction-sanity.git
    npm install
    ```
 
-## Head over to our [wiki page](https://github.com/openseattle/clearviction-sanity/wiki) to keep learning 🚀
+## Head over to our [wiki page](https://github.com/clearviction-devs/clearviction-sanity/wiki) to keep learning 🚀
 
 ## Sanity docs and links
 
