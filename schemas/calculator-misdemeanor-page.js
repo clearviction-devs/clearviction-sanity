@@ -1,9 +1,9 @@
 import {MdCalculate} from 'react-icons/md'
 
-export const calculatorInfoPage = {
+export const calculatorMisdemeanorPage = {
   type: 'document',
-  name: 'calculatorInfoPage',
-  title: 'Calculator Page',
+  name: 'calculatorInfoPage', // keeps "info" instead of "misdeameanor" so that current pages remain intact
+  title: 'Calculator Misdemeanor Page',
   icon: MdCalculate,
   fields: [
     {type: 'string', name: 'title', title: 'Title'},
