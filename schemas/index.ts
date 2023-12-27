@@ -1,3 +1,4 @@
-import {calculatorInfoPage} from './calculator-page-types'
+import {calculatorMisdemeanorPage} from './calculator-misdemeanor-page'
+import {calculatorFelonyPage} from './calculator-felony-page'
 import calculatorConfig from './calculator-config'
-export const schemaTypes = [calculatorInfoPage, calculatorConfig]
+export const schemaTypes = [calculatorConfig, calculatorMisdemeanorPage, calculatorFelonyPage]
