@@ -1,17 +1,22 @@
-import {MdCalculate} from 'react-icons/md'
+import { MdCalculate } from 'react-icons/md'
 
-export const calculatorFelonyPage = {
-  type: 'document',
-  name: 'calculatorFelonyPage',
-  title: 'Calculator Felony Page',
-  icon: MdCalculate,
-  fields: [
-    {type: 'string', name: 'title', title: 'Title'},
+enum pageTypes {
+  FELONY='calculatorFelonyPage',
+  MISDEMEANOR='calculatorInfoPage',
+}
+
+const getBaseCalculatorPageFields = (pageType: pageTypes) => {
+  return [
+    {
+      type: 'string', 
+      name: 'title', 
+      title: 'Title'
+    },
     {
       type: 'slug',
       name: 'slug',
       title: 'Slug',
-      options: {source: 'title'},
+      options: { source: 'title' },
       description: 'A unique identifier that can be used in a URL.',
     },
     {
@@ -33,7 +38,7 @@ export const calculatorFelonyPage = {
       type: 'boolean',
       name: 'isEligible',
       title: 'Is Eligible',
-      hidden: ({parent}) => !parent?.isFinalPage,
+      hidden: ({ parent }: { parent: any }) => !parent?.isFinalPage,
       initialValue: false,
       description: "Is the user's conviction eligible for vacation?",
     },
@@ -41,7 +46,7 @@ export const calculatorFelonyPage = {
       type: 'boolean',
       name: 'isUndetermined',
       title: 'Is Undetermined',
-      hidden: ({parent}) => !parent?.isFinalPage,
+      hidden: ({ parent }: { parent: any }) => !parent?.isFinalPage,
       initialValue: false,
       description: "Is the user's conviction eligibility unable to be determined at this time?",
     },
@@ -49,7 +54,11 @@ export const calculatorFelonyPage = {
       type: 'array',
       name: 'content',
       title: 'Content',
-      of: [{type: 'block'}],
+      of: [
+        {
+          type: 'block',
+        }
+      ],
       description: 'The main content that will be displayed to the user.',
     },
     {
@@ -68,15 +77,28 @@ export const calculatorFelonyPage = {
           name: 'choice',
           title: 'Choice',
           fields: [
-            {type: 'string', name: 'label', title: 'Label'},
-            {type: 'boolean', name: 'isExternalLink', title: 'External Link', initialValue: false},
-            {type: 'url', name: 'url', title: 'URL', hidden: ({parent}) => !parent?.isExternalLink},
+            {
+              type: 'string', 
+              name: 'label', 
+              title: 'Label'
+            },
+            {
+              type: 'boolean', 
+              name: 'isExternalLink', 
+              title: 'External Link', 
+              initialValue: false
+            },
+            {
+              type: 'url', 
+              name: 'url', 
+              title: 'URL', 
+              hidden: ({ parent }: { parent: any }) => !parent?.isExternalLink},
             {
               type: 'reference',
               name: 'linkTo',
               title: 'Link To',
-              to: [{type: 'calculatorFelonyPage'}],
-              hidden: ({parent}) => parent?.isExternalLink,
+              to: [{type: pageType}],
+              hidden: ({ parent }: { parent: any }) => parent?.isExternalLink,
             },
           ],
         },
@@ -84,5 +106,22 @@ export const calculatorFelonyPage = {
       description:
         'A list of choices for the user. These are typically references to other calculator pages, but can also be external links.',
     },
-  ],
+  ]
 }
+
+export const calculatorMisdemeanorPage = {
+  type: 'document',
+  name: 'calculatorInfoPage', // keeps "info" instead of "misdeameanor" so that current pages remain intact
+  title: 'Calculator Misdemeanor Page',
+  icon: MdCalculate,
+  fields: getBaseCalculatorPageFields(pageTypes.MISDEMEANOR),
+}
+
+export const calculatorFelonyPage = {
+  type: 'document',
+  name: 'calculatorFelonyPage',
+  title: 'Calculator Felony Page',
+  icon: MdCalculate,
+  fields: getBaseCalculatorPageFields(pageTypes.FELONY),
+}
+
