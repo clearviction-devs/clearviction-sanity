@@ -5,6 +5,16 @@ enum pageTypes {
   MISDEMEANOR='calculatorInfoPage',
 }
 
+interface ParentVisibilityState {
+  parent: {
+    isQuestion: boolean;
+    isFinalPage: boolean;
+    isEligible: boolean;
+    isUndetermined: boolean;
+    isExternalLink: boolean;
+  }
+}
+
 const getBaseCalculatorPageFields = (pageType: pageTypes) => {
   return [
     {
@@ -38,7 +48,7 @@ const getBaseCalculatorPageFields = (pageType: pageTypes) => {
       type: 'boolean',
       name: 'isEligible',
       title: 'Is Eligible',
-      hidden: ({ parent }: { parent: any }) => !parent?.isFinalPage,
+      hidden: ({ parent }: ParentVisibilityState) => !parent?.isFinalPage,
       initialValue: false,
       description: "Is the user's conviction eligible for vacation?",
     },
@@ -46,7 +56,7 @@ const getBaseCalculatorPageFields = (pageType: pageTypes) => {
       type: 'boolean',
       name: 'isUndetermined',
       title: 'Is Undetermined',
-      hidden: ({ parent }: { parent: any }) => !parent?.isFinalPage,
+      hidden: ({ parent }: ParentVisibilityState) => !parent?.isFinalPage,
       initialValue: false,
       description: "Is the user's conviction eligibility unable to be determined at this time?",
     },
@@ -92,13 +102,13 @@ const getBaseCalculatorPageFields = (pageType: pageTypes) => {
               type: 'url', 
               name: 'url', 
               title: 'URL', 
-              hidden: ({ parent }: { parent: any }) => !parent?.isExternalLink},
+              hidden: ({ parent }: ParentVisibilityState) => !parent?.isExternalLink},
             {
               type: 'reference',
               name: 'linkTo',
               title: 'Link To',
               to: [{type: pageType}],
-              hidden: ({ parent }: { parent: any }) => parent?.isExternalLink,
+              hidden: ({ parent }: ParentVisibilityState) => parent?.isExternalLink,
             },
           ],
         },
