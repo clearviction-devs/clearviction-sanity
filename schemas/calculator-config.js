@@ -103,7 +103,7 @@ export default {
           name: 'reference',
           type: 'reference',
           title: 'Reference',
-          to: [{type: 'calculatorInfoPage'}],
+          to: [{type: 'calculatorInfoPage'}], // uses misdemeanor page type because mis holds the HEAD for now
         },
       ],
     },
