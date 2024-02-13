@@ -21,7 +21,7 @@
     "react-icons": "^4.7.1",
     "react-is": "^18.2.0",
     "sanity": "^3.0.0",
-    "sanity-plugin-vercel-deploy": "^3.3.3",
+    "sanity-plugin-vercel-deploy": "^3.3.4",
     "styled-components": "^5.3.11"
   },
   "devDependencies": {
