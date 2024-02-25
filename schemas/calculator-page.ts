@@ -106,8 +106,15 @@ const getBaseCalculatorPageFields = (pageType: pageTypes) => {
             {
               type: 'reference',
               name: 'linkTo',
-              title: 'Link To',
+              title: `Link to ` + (pageType === pageTypes.FELONY ? `felony page` : `misdemeanor page`),
               to: [{type: pageType}],
+              hidden: ({ parent }: ParentVisibilityState) => parent.isExternalLink,
+            },
+            {
+              type: 'reference',
+              name: 'linkToOtherPageType',
+              title: `Link to ` + (pageType === pageTypes.FELONY ? `misdemeanor page` : `felony page`),
+              to: [{type: pageType === pageTypes.FELONY ? pageTypes.MISDEMEANOR : pageTypes.FELONY}],
               hidden: ({ parent }: ParentVisibilityState) => parent.isExternalLink,
             },
           ],
