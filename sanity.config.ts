@@ -3,7 +3,6 @@ import {deskTool} from 'sanity/desk'
 import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './schemas'
 import {MdSettings} from 'react-icons/md'
-import {vercelDeployTool} from 'sanity-plugin-vercel-deploy'
 
 const singletonActions = new Set(['publish', 'discardChanges', 'restore'])
 const singletonTypes = new Set(['calculatorConfig'])
@@ -33,7 +32,6 @@ export default defineConfig({
           ]),
     }),
     visionTool(),
-    vercelDeployTool(),
   ],
 
   schema: {
