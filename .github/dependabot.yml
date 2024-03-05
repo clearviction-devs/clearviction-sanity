@@ -13,4 +13,5 @@ updates:
     # this will raise a single pull request for all updates to a group. this separates dev and prod dependencies into two pull requests
     groups:
       default:
-        patterns: "*"
+        patterns:
+          - '*'
