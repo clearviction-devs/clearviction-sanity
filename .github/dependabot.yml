@@ -10,7 +10,7 @@ updates:
     schedule:
       interval: 'monthly'
 
-    # this will raise a single pull request for all updates to a group. this separates dev and prod dependencies into two pull requests
+    # this will raise a single pull request for all updates to a group
     groups:
       default:
         patterns:
