@@ -59,14 +59,9 @@ export default {
           title: 'Link Text',
         },
         {
-          name: 'isUndeterminedUrl',
+          name: 'feedbackUrl',
           type: 'url',
-          title: 'Eligibility Undetermined URL',
-        },
-        {
-          name: 'allOtherFeedbackUrl',
-          type: 'url',
-          title: 'All other feedback URL',
+          title: 'Feedback Form URL',
         },
       ],
     },
