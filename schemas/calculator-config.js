@@ -26,7 +26,6 @@ export default {
         {
           name: 'header',
           type: 'string',
-          styles: [{title: 'Normal', value: 'normal'}],
           title: 'Header',
         },
         {
